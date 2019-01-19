@@ -1,4 +1,4 @@
-# StatsD HTTP Proxy StatsdProxyClient
+# StatsD HTTP Proxy Client
 
 JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.
 
