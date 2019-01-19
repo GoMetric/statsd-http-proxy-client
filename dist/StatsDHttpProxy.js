@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports"], factory);
+    define(["exports", "whatwg-fetch"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports);
+    factory(exports, require("whatwg-fetch"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports);
+    factory(mod.exports, global.whatwgFetch);
     global.StatsDHttpProxy = mod.exports;
   }
-})(this, function (_exports) {
+})(this, function (_exports, _whatwgFetch) {
   'use strict';
 
   Object.defineProperty(_exports, "__esModule", {
@@ -88,7 +88,7 @@
      * @param {string} metricName Metric name in dot-notation like "cluster1.node2.cpu.load"
      * @param {object} metric
      *
-     * @returns promise
+     * @returns {Promise}
      */
     ;
 

@@ -1,5 +1,7 @@
 'use strict';
 
+import 'whatwg-fetch';
+
 class Client {
     /**
      * @param {string} proxyHost in format "https://server.com:8080/"
@@ -79,7 +81,7 @@ class Client {
      * @param {string} metricName Metric name in dot-notation like "cluster1.node2.cpu.load"
      * @param {object} metric
      *
-     * @returns promise
+     * @returns {Promise}
      */
     _send(metricType, metricName, metric) {
         let headers = {};
