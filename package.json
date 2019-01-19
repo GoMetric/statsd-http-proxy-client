@@ -1,0 +1,37 @@
+{
+  "name": "statsd-http-proxy-client",
+  "version": "1.0.0",
+  "description": "JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.",
+  "main": "src/StatsDProxyClient.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-classes": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "axios": "^0.18.0",
+    "eslint": "^4.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src",
+    "deploy": "./node_modules/.bin/babel src --out-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoMetric/statsd-http-proxy-client.git"
+  },
+  "keywords": [
+    "statsd",
+    "frontend",
+    "browser"
+  ],
+  "author": "Dmytro Sokil <dmytro.sokil@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GoMetric/statsd-http-proxy-client/issues"
+  },
+  "homepage": "https://github.com/GoMetric/statsd-http-proxy-client#readme"
+}
