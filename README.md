@@ -2,7 +2,9 @@
 
 JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.
 
-## Basic useage
+## Basic usage
+
+Library uses `fetch` so to support old browsers you need [fetch polyfill](https://github.com/github/fetch).
 
 ### UMD loader
 
