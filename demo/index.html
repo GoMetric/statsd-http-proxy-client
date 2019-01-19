@@ -16,14 +16,11 @@ You can find them in <a href="https://github.com/GoMetric/statsd-http-proxy">Sta
     <li><a href="#" data-metric-type="timing">Send timing</a></li>
 </ul>
 
-<ul>
-    <li><a href="#" data-token-mode="token-in-header">Pass token in header</a></li>
-    <li><a href="#" data-token-mode="token-in-query">Pass token in query string</a></li>
-    <li><a href="#" data-token-mode="token-empty">Do not pass token</a></li>
-</ul>
-
 </body>
-<script src="../dist/StatsDProxyClient.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../dist/StatsDHttpProxy.js"></script>
+
 <script type="text/javascript">
     (function() {
         // Token is valid to 2029-02-23T21:32:22.615Z, and builds with secret: somesecret
@@ -32,14 +29,10 @@ You can find them in <a href="https://github.com/GoMetric/statsd-http-proxy">Sta
         var metricName = 'someMetricName';
         var metricType = "count";
 
-        var client = new StatsDProxyClient(statsdHttpProxyHost, token);
+        var client = new StatsDHttpProxy.Client(statsdHttpProxyHost, token);
 
         $(document).on('click', '[data-metric-type]', function(e) {
             metricType = $(e.currentTarget).data('metricType');
-        });
-
-        $(document).on('click', '[data-token-mode]', function(e) {
-            tokenMode = $(e.currentTarget).data('token-mode');
         });
 
         // send some metric
@@ -49,11 +42,10 @@ You can find them in <a href="https://github.com/GoMetric/statsd-http-proxy">Sta
                     client.count(metricName);
                     break;
                 case 'timing':
-                    client.count(metricName, 100);
+                    client.timing(metricName, 100);
                     break;
             }
         }, 1000);
-
     })();
 </script>
 </html>

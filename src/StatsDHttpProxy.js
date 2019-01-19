@@ -1,6 +1,6 @@
 'use strict';
 
-class StatsDProxyClient {
+class Client {
     /**
      * @param {string} proxyHost in format "https://server.com:8080/"
      * @param {string} jwtToken
@@ -101,7 +101,7 @@ class StatsDProxyClient {
 
         let body = query.length > 0 ? query.join('&') : null;
 
-        return this.fetch(
+        return fetch(
             url,
             {
                 method: 'POST',
@@ -116,4 +116,4 @@ class StatsDProxyClient {
     }
 }
 
-export default StatsDProxyClient;
+export { Client };

@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports);
-    global.StatsDProxyClient = mod.exports;
+    global.StatsDHttpProxy = mod.exports;
   }
 })(this, function (_exports) {
   'use strict';
