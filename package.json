@@ -1,6 +1,6 @@
 {
   "name": "@gometric/statsd-http-proxy-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.",
   "main": "src/StatsDHttpProxy.js",
   "dependencies": {
