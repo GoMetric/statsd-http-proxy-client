@@ -2,6 +2,9 @@
 
 JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.
 
+[![npm](https://img.shields.io/npm/v/@gometric/statsd-http-proxy-client.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/@gometric/statsd-http-proxy-client)
+[![npm](https://img.shields.io/npm/dt/@gometric/statsd-http-proxy-client.svg)](https://www.npmjs.com/package/@gometric/statsd-http-proxy-client)
+
 ## Installation
 
 ### Through npm
