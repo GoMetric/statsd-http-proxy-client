@@ -2,7 +2,7 @@
   "name": "@gometric/statsd-http-proxy-client",
   "version": "1.0.0",
   "description": "JavaScript client for [statsd-http-proxy](https://github.com/GoMetric/statsd-http-proxy) for using in browsers.",
-  "main": "src/StatsDProxyClient.js",
+  "main": "src/StatsDHttpProxy.js",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "whatwg-fetch": "^3.0.0"
